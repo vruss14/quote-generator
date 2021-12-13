@@ -5,7 +5,8 @@ function QuoteBox(props) {
     const styles = {
         width: '55vw',
         height: '40vh',
-        overflow: 'scroll'
+        overflow: 'scroll',
+        boxShadow: '15px 30px 30px hsl(0deg 0% 0% / 0.20)'
     }
 
   return (
@@ -25,9 +26,6 @@ function QuoteBox(props) {
             <button type="button" className="btn btn-outline-dark w-25 align-self-end">New Quote</button>
         </div>
         </div>
-
-
-
     </div>
   );
 }

@@ -5,10 +5,9 @@ import React from "react";
 function Container(props) {
 
   return (
-      <div className = "container container-fluid d-flex min-vw-100 min-vh-100 justify-content-center align-items-center bg-dark text-white">
-          <h1 className="mb-5 has-text-centered is-size-1 has-text-weight-bold">Test Heading</h1>
+      <main className = "container container-fluid d-flex min-vw-100 min-vh-100 justify-content-center align-items-center bg-dark text-white">
           {props.children}
-      </div>
+      </main>
   );
 }
 

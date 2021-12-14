@@ -1,11 +1,9 @@
 import Container from './components/Container';
-import QuoteBox from './components/quoteBox';
+import './App.css'; 
 
 function App() {
   return (
-    <Container>
-      <QuoteBox />
-    </Container>
+    <Container />
   );
 }
 

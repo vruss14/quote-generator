@@ -10,9 +10,14 @@
 }
 
 #icon-container svg:hover {
-  /* Correct filter from black to Twitter blue generated here: https://codepen.io/sosuke/pen/Pjoqqp */
+  /* Correct filter to convert element from black to Twitter blue generated here: https://codepen.io/sosuke/pen/Pjoqqp */
   filter: invert(48%) sepia(43%) saturate(3184%) hue-rotate(180deg) brightness(104%) contrast(90%);
   cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: black;
 }
 
 @media screen and (max-width: 768px) {

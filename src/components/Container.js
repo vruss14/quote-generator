@@ -1,27 +1,64 @@
 import React, { useState } from "react";
 
 function Container(props) {
-  // Color Scheme found here: https://digitalsynopsis.com/design/minimal-web-color-palettes-combination-hex-code/
+  // Color Scheme ideas found here: https://digitalsynopsis.com/design/minimal-web-color-palettes-combination-hex-code/
   const colors = ['#F67280', '#C06C84', '#6C5B7B', '#355C7D', '#2A363B', '#474747', '#45ADA8' ];
+
+  const quotes = [
+    {
+      words: '"Spread love everywhere you go. Let no one ever come to you without leaving happier."',
+      author: '— Mother Teresa'
+    },
+
+    {
+      words: '"The future belongs to those who believe in the beauty of their dreams."',
+      author: '— Eleanor Roosevelt'
+    },
+
+    {
+      words: '"The greatest glory in living lies not in never falling, but in rising every time we fall."',
+      author: '— Nelson Mandela'
+    },
+
+    {
+      words: '"Life itself is the most wonderful fairy tale."',
+      author: '— Hans Christian Andersen'
+    },
+
+    {
+      words: '"Success is not final; failure is not fatal: It is the courage to continue that counts."',
+      author: '— Winston S. Churchill'
+    },
+  ]
+  
   let randomColor = colors[Math.floor(Math.random() * colors.length)];
+  let randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
 
   const [state, setState] = useState({
     bkgrndColor: randomColor,
+    displayedQuote: randomQuote
   });
 
-  function changeColor() {
-    // There is a chance that the random function will choose the same color as the current state
-    // Since that would result in no color change on click, this extra step ensures a unique color change every time
+  function changeContent() {
+    // There is a chance that the random function will choose the same color or quote as the current state
+    // An extra step of verification ensures new content with each click event
 
     let newColor = colors[Math.floor(Math.random() * colors.length)];
+    let newQuote = quotes[Math.floor(Math.random() * quotes.length)];
 
     if(newColor === state.bkgrndColor) {
-      changeColor();
-      return;
-    } else {
-      setState({bkgrndColor: newColor});
+      changeContent();
       return;
     }
+
+    if(newQuote.words === state.displayedQuote.words) {
+      changeContent();
+      return;
+    }
+
+    setState({bkgrndColor: newColor, displayedQuote: newQuote});
+    return;
+
   }
 
   const styles = {
@@ -36,12 +73,10 @@ function Container(props) {
               <div className="row p-4">
                   <div className="quote-container">
                       <p className="fs-4 fw-light" id="random-quote">
-                          "This is the default quote, which will be changed later on in development. 
-                          The quote has been built up even more to show what will happen when the quote
-                          is much lengthier."
+                         {state.displayedQuote.words}
                       </p>
                   </div>
-                  <p className="text-black text-end pl-3 fw-light">— Author Unknown</p>
+                  <p className="text-black text-end pl-3 fw-light">{state.displayedQuote.author}</p>
               </div>
 
               <div className="d-flex flex-row mb-3 w-100 justify-content-around text-black">
@@ -52,7 +87,7 @@ function Container(props) {
               </div>
               <button 
               title="Click for a new quote!" 
-              onClick={changeColor}
+              onClick={changeContent}
               type="button" 
               className="btn quote-btn text-white align-self-end" 
               style={styles}>New Quote</button>

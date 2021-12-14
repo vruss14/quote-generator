@@ -1,38 +1,23 @@
-.App {
-  text-align: center;
+#quote-box {
+  width: 55vw;
+  height: 40vh;
+  overflow: scroll;
+  box-shadow: 15px 30px 30px hsl(0deg 0% 0% / 0.20);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.quote-btn:hover {
+  opacity: 0.8;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#icon-container svg:hover {
+  /* Correct filter from black to Twitter blue generated here: https://codepen.io/sosuke/pen/Pjoqqp */
+  filter: invert(48%) sepia(43%) saturate(3184%) hue-rotate(180deg) brightness(104%) contrast(90%);
+  cursor: pointer;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+@media screen and (max-width: 768px) {
+  #quote-box {
+    width: 95%;
+    height: auto;
   }
 }

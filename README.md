@@ -1,70 +1,44 @@
-# Getting Started with Create React App
+# Quote Generator
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+A web application that utilizes modern front-end frameworks and displays random inspirational quotes.
 
-In the project directory, you can run:
+## Description
 
-### `npm start`
+This project incorporates utilizes Bootstrap and React to create a positive user experience. The page's styling and content is dynamically updated based on state. I particularly enjoyed the logic that went into ensuring that every time the "New Quote" button gets clicked, there is a unique color change and unique quote that is displayed next. Because I only placed a few colors and quotes into the code initially, I was running into an issue where sometimes selecting a random color/quote would result in the same color/quote being selected twice in a row. I'm glad I was able to solve that issue because that would have hindered the user experience.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+In creating this project, I also learned more about creating realistic drop shadows with CSS. I found an excellent article online that went into the theory behind what makes a shadow realistic and offered suggestions for keeping a proper ratio in a CSS shadow: https://www.joshwcomeau.com/css/designing-shadows/
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Additionally, I was able to learn how to use React on CodePen. I built the page in Visual Studio Code and periodically pushed updates to GitHub, but translating the finished product into something that would also work well on CodePen and that could be tested was a challenge. After some research, I learned about how to successfully import various CDNs so that components can display as expected.
 
-### `npm test`
+Overall, this was a great opportunity for me to further develop my skills in using React. This page could certainly be further developed with even more colors, quotes, and perhaps animations as well.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## Technologies Used
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- HTML
+- CSS
+- Bootstrap
+- JavaScript & JSX
+- React
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Installation
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+No installation steps are required to view this project. The application's source code can be found on GitHub here: https://github.com/vruss14/quote-generator.
 
-### `npm run eject`
+## Usage
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+The webpage includes responsive design and can be viewed successfully on all devices.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Below is a screenshot of the desktop version of the page:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+![Quote Generator on Desktop](./public/quote-generator-desktop.png)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Below is a screenshot of the page on mobile:
 
-## Learn More
+![Quote Generator on Mobile](./public/quote-generator-mobile.png)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Credits
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Valerie Russell was the sole contributor to this project. Contact her at vruss14@gmail.com.
